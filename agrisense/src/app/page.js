@@ -347,6 +347,114 @@ export default function Home() {
           color: #c4c4c4;
           letter-spacing: 0.03em;
         }
+
+        /* ── Mobile Responsive ── */
+        @media (max-width: 480px) {
+          .agro-wrap {
+            padding: 36px 14px 60px;
+          }
+
+          .hero {
+            margin-bottom: 36px;
+          }
+
+          .hero-title {
+            font-size: 30px;
+            letter-spacing: -0.4px;
+          }
+
+          .hero-sub {
+            font-size: 12.5px;
+          }
+
+          .mode-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+          }
+
+          .mode-card {
+            padding: 14px 6px 12px;
+            border-radius: 14px;
+          }
+
+          .mode-emoji {
+            font-size: 22px;
+            margin-bottom: 6px;
+          }
+
+          .mode-name {
+            font-size: 11.5px;
+          }
+
+          .mode-hint {
+            font-size: 10px;
+          }
+
+          .mod-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+          }
+
+          .mod-card {
+            padding: 16px 14px;
+            border-radius: 16px;
+            gap: 10px;
+          }
+
+          .mod-icon {
+            width: 38px; height: 38px;
+            font-size: 18px;
+            border-radius: 10px;
+          }
+
+          .mod-title {
+            font-size: 13px;
+          }
+
+          .mod-desc {
+            font-size: 11px;
+          }
+
+          .cta {
+            padding: 15px;
+            font-size: 14px;
+            border-radius: 16px;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .hero-title {
+            font-size: 26px;
+          }
+
+          .mode-grid {
+            gap: 6px;
+          }
+
+          .mode-card {
+            padding: 12px 4px 10px;
+          }
+
+          .mode-emoji {
+            font-size: 20px;
+          }
+
+          .mode-name {
+            font-size: 10.5px;
+          }
+
+          .mode-hint {
+            display: none;
+          }
+
+          .mod-card {
+            padding: 13px 11px;
+          }
+
+          .mod-title {
+            font-size: 12px;
+          }
+        }
       `}</style>
 
       <div className="agro-wrap">
@@ -416,8 +524,6 @@ export default function Home() {
             Get Started
             <span className="cta-arrow">→</span>
           </button>
-
-          <p className="footer-note">No sign-up required · Free to use</p>
 
         </div>
       </div>

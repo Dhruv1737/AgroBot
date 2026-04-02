@@ -1,6 +1,10 @@
+'use client'
 import Link from 'next/link'
+import { SignInButton, UserButton, useAuth } from '@clerk/nextjs'
 
 export default function Navbar() {
+  const { isSignedIn } = useAuth()
+
   return (
     <>
       <style>{`
@@ -18,7 +22,7 @@ export default function Navbar() {
         }
 
         .nav-inner {
-          max-width: 548px;
+          max-width: 748px;
           margin: 0 auto;
           padding: 0 20px;
           height: 58px;
@@ -90,6 +94,30 @@ export default function Navbar() {
           0%,100% { opacity:1; transform:scale(1); }
           50%      { opacity:0.35; transform:scale(0.7); }
         }
+
+        .nav-right {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .sign-in-btn {
+          background: rgba(255,255,255,0.15);
+          border: 1px solid rgba(255,255,255,0.25);
+          border-radius: 999px;
+          padding: 6px 16px;
+          font-size: 13px;
+          font-weight: 600;
+          color: #fff;
+          cursor: pointer;
+          font-family: 'DM Sans', sans-serif;
+          backdrop-filter: blur(4px);
+          transition: background 0.2s;
+        }
+
+        .sign-in-btn:hover {
+          background: rgba(255,255,255,0.25);
+        }
       `}</style>
 
       <nav className="nav">
@@ -100,10 +128,22 @@ export default function Navbar() {
             <span className="nav-logo-text">Agro<em>Bot</em></span>
           </Link>
 
-          <span className="nav-badge">
-            <span className="nav-badge-dot" />
-            AI Powered
-          </span>
+          <div className="nav-right">
+
+            <span className="nav-badge">
+              <span className="nav-badge-dot" />
+              AI Powered
+            </span>
+
+            {isSignedIn ? (
+              <UserButton afterSignOutUrl="/" />
+            ) : (
+              <SignInButton mode="modal">
+                <button className="sign-in-btn">Sign In</button>
+              </SignInButton>
+            )}
+
+          </div>
 
         </div>
       </nav>
