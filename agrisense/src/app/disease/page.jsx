@@ -153,6 +153,7 @@ function DiseaseContent() {
           line-height: 1.6; resize: none;
           transition: border-color .17s, box-shadow .17s;
           outline: none; background: #fafaf9;
+          box-sizing: border-box;
         }
         .d-textarea:focus { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.1); background: #fff; }
         .d-textarea::placeholder { color: #c4c4c4; }
@@ -215,6 +216,7 @@ function DiseaseContent() {
           font-size: 13px; color: #18181b;
           resize: none; outline: none; background: #fafaf9;
           transition: border-color .17s, box-shadow .17s;
+          box-sizing: border-box;
         }
         .d-textarea-sm:focus { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.1); background: #fff; }
         .d-textarea-sm::placeholder { color: #c4c4c4; }
@@ -292,6 +294,143 @@ function DiseaseContent() {
         }
         .prec-item:last-child { border-bottom: none; padding-bottom: 0; }
         .prec-arrow { color: #16a34a; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+
+        /* ── Mobile Responsive ── */
+        @media (max-width: 480px) {
+          .d-wrap {
+            padding: 28px 12px 60px;
+          }
+
+          .d-header {
+            margin-bottom: 24px;
+          }
+
+          .d-title {
+            font-size: 24px;
+          }
+
+          .d-sub {
+            font-size: 12px;
+          }
+
+          .mode-tabs {
+            gap: 5px;
+            padding: 4px;
+            border-radius: 13px;
+            margin-bottom: 14px;
+          }
+
+          .mode-tab {
+            gap: 5px;
+            padding: 9px 4px;
+            font-size: 12px;
+            border-radius: 9px;
+          }
+
+          .mode-tab-emoji {
+            font-size: 13px;
+          }
+
+          .input-card {
+            padding: 16px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+          }
+
+          .d-textarea {
+            font-size: 13px;
+            padding: 13px;
+            border-radius: 12px;
+          }
+
+          .mic-btn {
+            width: 72px;
+            height: 72px;
+            font-size: 28px;
+          }
+
+          .drop-zone {
+            padding: 28px 16px;
+          }
+
+          .drop-icon {
+            font-size: 30px;
+          }
+
+          .drop-title {
+            font-size: 12.5px;
+          }
+
+          .drop-sub {
+            font-size: 11px;
+          }
+
+          .d-textarea-sm {
+            font-size: 12.5px;
+            padding: 10px 12px;
+          }
+
+          .analyze-btn {
+            padding: 14px;
+            font-size: 13.5px;
+            border-radius: 14px;
+          }
+
+          .result-card {
+            padding: 18px;
+            border-radius: 18px;
+          }
+
+          .result-title {
+            font-size: 18px;
+            margin-bottom: 14px;
+          }
+
+          .result-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+          }
+
+          .result-field {
+            padding: 11px 12px;
+            border-radius: 12px;
+          }
+
+          .field-val {
+            font-size: 12.5px;
+          }
+
+          .prec-item {
+            font-size: 12px;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .d-title {
+            font-size: 21px;
+          }
+
+          .mode-tab {
+            font-size: 11px;
+            padding: 8px 2px;
+          }
+
+          .mode-tab-emoji {
+            display: none;
+          }
+
+          .result-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .result-field.full {
+            grid-column: 1;
+          }
+
+          .result-title {
+            font-size: 16px;
+          }
+        }
       `}</style>
 
       <div className="d-wrap">
