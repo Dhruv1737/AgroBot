@@ -117,6 +117,7 @@ export default function CropPage() {
           outline: none;
           transition: border-color .17s, box-shadow .17s, background .17s;
           appearance: none;
+          box-sizing: border-box;
         }
         .c-input:focus, .c-select:focus {
           border-color: #0d9488;
@@ -253,6 +254,139 @@ export default function CropPage() {
           color: #fff; border-radius: 50%;
           font-size: 10px; font-weight: 700;
           margin-bottom: 10px;
+        }
+
+        /* ── Mobile Responsive ── */
+        @media (max-width: 480px) {
+          .c-wrap {
+            padding: 28px 12px 60px;
+          }
+
+          .c-title {
+            font-size: 24px;
+          }
+
+          .c-sub {
+            font-size: 12px;
+            margin-bottom: 24px;
+          }
+
+          .form-card {
+            padding: 16px;
+            border-radius: 16px;
+          }
+
+          .form-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+
+          .c-input, .c-select {
+            font-size: 13px;
+            padding: 12px 13px;
+          }
+
+          .c-btn {
+            padding: 14px;
+            font-size: 13.5px;
+            border-radius: 14px;
+            margin-bottom: 16px;
+          }
+
+          .weather-card {
+            padding: 16px;
+            border-radius: 16px;
+          }
+
+          .weather-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+          }
+
+          .weather-tile {
+            padding: 12px 8px;
+            border-radius: 12px;
+          }
+
+          .weather-emoji {
+            font-size: 18px;
+            margin-bottom: 4px;
+          }
+
+          .weather-val {
+            font-size: 12.5px;
+          }
+
+          .weather-label {
+            font-size: 9px;
+          }
+
+          .summary-card {
+            padding: 16px 18px;
+            border-radius: 16px;
+          }
+
+          .summary-text {
+            font-size: 13px;
+            line-height: 1.65;
+          }
+
+          .crop-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+          }
+
+          .crop-card {
+            padding: 16px 10px;
+            border-radius: 14px;
+          }
+
+          .crop-emoji {
+            font-size: 28px;
+            margin-bottom: 8px;
+          }
+
+          .crop-name {
+            font-size: 12.5px;
+          }
+
+          .crop-reason {
+            font-size: 11px;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .c-title {
+            font-size: 21px;
+          }
+
+          .weather-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .weather-val {
+            font-size: 11.5px;
+          }
+
+          .crop-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .crop-emoji {
+            font-size: 24px;
+          }
+
+          .crop-name {
+            font-size: 12px;
+          }
+
+          .crop-reason {
+            font-size: 10.5px;
+          }
+
+          .summary-text {
+            font-size: 12.5px;
+          }
         }
       `}</style>
 
