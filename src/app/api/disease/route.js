@@ -36,6 +36,7 @@ Precautions & Treatment:
 - [point 1]
 - [point 2]
 - [point 3]
+Do not make any text bold, keep everything in normal font
 Additional Notes: [any extra advice]
 ${text ? `Farmer also says: ${text}` : ''}`
       ])
